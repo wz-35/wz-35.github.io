@@ -174,6 +174,56 @@
         
 
 <div class="post">
+    <a href="/2023/05/06/python%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%86%E5%89%B2%E4%B8%8E%E6%8B%BC%E6%8E%A5/">
+        <h2 class="post-title">python中字符串的分割与拼接</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/6
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>python中字符串的分割主要使用split()函数，其用法为：</p>
+<p>定义字符串a:     a&#x3D;’1234567890’</p>
+<p>然后进行分割： a1&#x3D;a.split(‘2’)</p>
+<p>输出：                 print(a1)</p>
+<p>结果为：</p>
+<p><img src="https://s2.loli.net/2023/05/06/V1YF354yN9jRDHO.png"></p>
+<p>可以看到，.split()函数中的值为’2’,也就是被切割的值为2，字符串a就会把2的值切去。这个方法可以去除字符串中所有的某一个值。</p>
+<p>我们让a的值为121212121验证一下。</p>
+<p><img src="https://s2.loli.net/2023/05/06/F1MlrW7T9ZEqiNy.png"></p>
+<p>可以看到所有的2都被切去了。我们可以往split函数里加参数来控制切除的数值的个数。格式为：.split(‘a’,n)其中n为参数。我们看一下效果。</p>
+<p>n&#x3D;1时</p>
+<p><img src="https://s2.loli.net/2023/05/06/cxiYjyGoHsh2gJI.png"></p>
+<p>可以看到第一个2被切除了，但后面的依旧保留。</p>
+<p>然后是字符串的拼接。字符串的拼接用到join函数。用法为<code>&#39;b&#39;.join(a1)</code>（其中b是分割符，可以为-，字母，数字等，也可以不设置。）</p>
+<p>我们在上述代码中加入a2&#x3D;’’.join(a1)即可实现对a1的拼接。</p>
+<p><img src="https://s2.loli.net/2023/05/06/9uO8KPdceEstSLm.png"></p>
+<p>可以看到a2就是a1拼接后的结果。</p>
+<p>第二种用法，需要引用os库。格式为：os.path.join(a1,a2,a3,a4,······)意思是把a1,a2,a3,a4a······等用\链接起来当作路径，我们来浅试一下。</p>
+<p><code>import os</code><br><code>a1=&#39;wz&#39;</code><br><code>a2=&#39;lk&#39;</code><br><code>a3=&#39;fz&#39;</code><br><code>a4=&#39;eq&#39;</code><br><code>print(os.path.join(a1,a2,a3,a4))</code></p>
+<p>输出结果为：<code>wz\lk\fz\eq</code></p>
+<p><img src="https://s2.loli.net/2023/04/17/CmpqyeGEBKJzTUh.jpg"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/05/06/python%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%86%E5%89%B2%E4%B8%8E%E6%8B%BC%E6%8E%A5/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
     <a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/">
         <h2 class="post-title">python中的切片操作</h2>
     </a>
