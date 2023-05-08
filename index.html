@@ -174,6 +174,81 @@
         
 
 <div class="post">
+    <a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/">
+        <h2 class="post-title">python中的转义字符</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/8
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>​    </p>
+<table>
+<thead>
+<tr>
+<th><code>\\</code>                                                                                                                                                         输出反斜杠</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\‘                                                                                                                                                            输出单引号</td>
+</tr>
+<tr>
+<td>\“                                                                                                                                                            输出双引号</td>
+</tr>
+<tr>
+<td><code>\n</code>                                                                                                                                                          换行</td>
+</tr>
+<tr>
+<td><code>\t</code>                                                                                                                                                          水平制表符</td>
+</tr>
+<tr>
+<td><code>\r</code>                                                                                                                                                          光标回到首位</td>
+</tr>
+<tr>
+<td><code>\b</code>                                                                                                                                                           退格</td>
+</tr>
+</tbody></table>
+<p>前三个都好理解，就是输出这三个特殊用法的字符。</p>
+<p><img src="https://s2.loli.net/2023/05/08/hVMaiYbTrXduxZ8.png"></p>
+<p>\n是输出换行，很实用。</p>
+<p><img src="https://s2.loli.net/2023/05/08/nBYLx8EOI5kyrW2.png"></p>
+<p>可以看到</p>
+<p><code>print(&#39;hello\nword&#39;)</code><br><code>print(&#39;hello&#39;&#39;\n&#39;&#39;word&#39;)</code></p>
+<p>输出结果是一样的。转义字符串都可以这样用。</p>
+<p>然后是\t,水平制表符效果如下：</p>
+<p><img src="https://s2.loli.net/2023/05/08/Qc3gTwUCyiafRBO.png"></p>
+<p>也就是说相当于把\t前后分开输出。</p>
+<p>\r的光标回到首位，我也不明白是什么意思，看效果：</p>
+<p><img src="https://s2.loli.net/2023/05/08/F4ZEsuHNRW1Gw6j.png"></p>
+<p>意思是把\r前面的删除输出后面的。</p>
+<p>\b我也不知道什么意思，看效果：</p>
+<p><img src="https://s2.loli.net/2023/05/08/mi39S7ydJUCkY2Q.png"></p>
+<p>反正就是把\b前面的字符删除了。感觉没啥作用。</p>
+<p>值得注意的是，如果不希望转义字符串发挥作用，只需要在前面加一个r就行。</p>
+<p><img src="https://s2.loli.net/2023/05/08/TIcdYJG1a7Vv5Fm.png"></p>
+<p>而且第一种格式可以，第二种格式不行。</p>
+<p><img src="https://s2.loli.net/2023/05/08/IAbypa68jMx1SRg.jpg"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
     <a href="/2023/05/06/python%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%86%E5%89%B2%E4%B8%8E%E6%8B%BC%E6%8E%A5/">
         <h2 class="post-title">python中字符串的分割与拼接</h2>
     </a>
