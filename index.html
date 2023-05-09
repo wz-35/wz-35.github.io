@@ -201,7 +201,7 @@
 <p><img src="https://s2.loli.net/2023/05/09/Fvl3BPHzmOTgLfN.png"></p>
 <p>可以看到仍然是有顺序的。</p>
 <p>我们也可以用代码来实现这个效果。</p>
-<p><code>import os</code><br><code>path=os.getcwd()  #返回当前进程的工作目录</code><br><code>path_list=os.listdir(path)</code><br><code>path_list.sort(key=lambda x:int(x.split(&#39;.&#39;)[0])) </code><br><code>print(path_list)</code></p>
+<p><code>import os</code><br><code>path=r&quot;D:\桌面\txt&quot;</code><br><code>path_list=os.listdir(path)</code><br><code>path_list.sort(key=lambda x:int(x.split(&#39;.&#39;)[0]))</code><br><code>print(path_list)</code></p>
 <p>我们先说一下lambda。在python中，lambda函数的语法是唯一的。lambda是python预留的关键字。其语法为：</p>
 <p><code>lambda x,y:x*y</code>(其中x,y是参数，不是必须有两个)</p>
 <p>lambda函数可以将函数值赋值给一个变量。如：<code>key=lambda x,y:x*y</code></p>
