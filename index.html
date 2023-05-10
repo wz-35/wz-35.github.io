@@ -1,562 +1,508 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>WZ</title>
-        <meta name="author" content="寡人略秀" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
-        <link rel="icon" href="/images/0.jpg" />
-        <canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas>
-<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
-<script src="/js/fireworks.min.js"></script>
-<canvas id="background" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"></canvas>
-<script src="/js/background.min.js"></script>
-<div id="cursor"></div>
-<link rel="stylesheet" href="/css/cursor.min.css">
-<script src="/js/cursor.min.js"></script>
-        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
-<link rel="stylesheet" href="/css/fonts.min.css" />
-<script> const mixins = {}; </script>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
-<link
-    rel="stylesheet"
-    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
-/>
-<script src="/js/lib/highlight.js"></script>
+<link rel="alternate" type="application/rss+xml" title="WZ" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="WZ" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="WZ" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://example.com/">
 
 
 
-<script src="/js/lib/preview.js"></script>
-
-
-
-
-
-<script src="/js/lib/home.js"></script>
-
-<link rel="stylesheet" href="/css/main.css" />
-
-    <meta name="generator" content="Hexo 6.3.0"></head>
-    <body>
-        <div id="layout">
-            <transition name="fade">
-            <div id="loading" v-show="loading">
-                <div id="loading-circle">
-                    <h2>a</h2>
-                    <p>wz</p>
-                    <img src="/images/loading.gif" />
-                </div>
-            </div>
-            </transition>
-            <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
-    <div class="desktop-menu">
-        <a class="title" href="/">
-            <span>WZ</span>
-        </a>
-        
-        <a href="/">
-            <i class="fa-solid fa-house fa-fw"></i>
-            <span>&ensp;Home</span>
-        </a>
-        
-        <a href="/about">
-            <i class="fa-solid fa-id-card fa-fw"></i>
-            <span>&ensp;About</span>
-        </a>
-        
-        <a href="/archives">
-            <i class="fa-solid fa-box-archive fa-fw"></i>
-            <span>&ensp;Archives</span>
-        </a>
-        
-        <a href="/categories">
-            <i class="fa-solid fa-bookmark fa-fw"></i>
-            <span>&ensp;Categories</span>
-        </a>
-        
-        <a href="/tags">
-            <i class="fa-solid fa-tags fa-fw"></i>
-            <span>&ensp;Tags</span>
-        </a>
-        
+  <title>Yume Shoka = WZ</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
     </div>
-    <div id="mobile-menu">
-        <div class="curtain" @click="shouMenuItems = !shouMenuItems" v-show="shouMenuItems"></div>
-        <div class="title" @click="shouMenuItems = !shouMenuItems">
-            <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;WZ</span>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+            <a href="/" class="logo" rel="start"><p class="artboard">Yume Shoka</p>
+              <h1 itemprop="name headline" class="title">WZ</h1>
+            </a>
+          
+          </div>
         </div>
-        <transition name="slide">
-        <div class="items" v-show="shouMenuItems">
-            
-            <a href="/">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-house fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
-                </div>
-            </a>
-            
-            <a href="/about">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-id-card fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
-                </div>
-            </a>
-            
-            <a href="/archives">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-box-archive fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
-                </div>
-            </a>
-            
-            <a href="/categories">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-bookmark fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
-                </div>
-            </a>
-            
-            <a href="/tags">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
-                </div>
-            </a>
-            
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="index wrap">
+    <h2 class="divider">Post List</h2>
+    <div class="segments posts">
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/" itemprop="url" title="python中os.listdir的排序问题"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-05-09 13:07:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-05-09T13:07:00+08:00">2023-05-09</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/" itemprop="url" title="python中os.listdir的排序问题">python中os.listdir的排序问题</a></h3>
+    <div class="excerpt">
+        ​ os库中的os.path(path)方法可以以表列的方式返回path路径下的所有文件。但是返回的文件顺序是有改变的。例如：
+
+这是原来的文件排序，再看返回的：
+
+可以看到，文件顺序是被打乱的。其实os.listdir()遍历之后的排序是按照文件名的二进制码来排的，我们可以通过改名字来避免乱序。例如将名字命名为000000001.png等。我有个例子：
+
+这个是源文件，可以看到是许多有序号的二维码。我们用os.listdir()给他排序试试。
+
+可以看到仍然是有顺序的。
+我们也可以用代码来实现这个效果。
+import...
+    </div>
+    <a href="/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/" itemprop="url" title="python中os.listdir的排序问题" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" itemprop="url" title="python中的转义字符"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-05-08 17:11:17">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-05-08T17:11:17+08:00">2023-05-08</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" itemprop="url" title="python中的转义字符">python中的转义字符</a></h3>
+    <div class="excerpt">
+        ​
+前三个都好理解，就是输出这三个特殊用法的字符。
+
+\n是输出换行，很实用。
+
+可以看到
+print(&amp;#39;hello\nword&amp;#39;)print(&amp;#39;hello&amp;#39;&amp;#39;\n&amp;#39;&amp;#39;word&amp;#39;)
+输出结果是一样的。转义字符串都可以这样用。
+然后是\t,水平制表符效果如下：
+
+也就是说相当于把\t前后分开输出。
+\r的光标回到首位，我也不明白是什么意思，看效果：
+
+意思是把\r前面的删除输出后面的。
+\b我也不知道什么意思，看效果：
+
+反正就是把\b前面的字符删除了。感觉没啥作用。
+...
+    </div>
+    <a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" itemprop="url" title="python中的转义字符" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/05/06/python%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%86%E5%89%B2%E4%B8%8E%E6%8B%BC%E6%8E%A5/" itemprop="url" title="python中字符串的分割与拼接"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-05-06 15:48:03">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-05-06T15:48:03+08:00">2023-05-06</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/05/06/python%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%86%E5%89%B2%E4%B8%8E%E6%8B%BC%E6%8E%A5/" itemprop="url" title="python中字符串的分割与拼接">python中字符串的分割与拼接</a></h3>
+    <div class="excerpt">
+        python中字符串的分割主要使用split()函数，其用法为：
+定义字符串a: a&amp;#x3D;’1234567890’
+然后进行分割： a1&amp;#x3D;a.split(‘2’)
+输出：...
+    </div>
+    <a href="/2023/05/06/python%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%86%E5%89%B2%E4%B8%8E%E6%8B%BC%E6%8E%A5/" itemprop="url" title="python中字符串的分割与拼接" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" itemprop="url" title="python中的切片操作"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-04-30 21:33:19">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-04-30T21:33:19+08:00">2023-04-30</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" itemprop="url" title="python中的切片操作">python中的切片操作</a></h3>
+    <div class="excerpt">
+        python中的切片操作，具体是指对数组的切片。格式为：
+a[::n]
+a[:n:]
+a[n::]
+其中a为数组，n为切片数。具体演示为：
+定义一个数组a[1,2,3,4,5,6,7,8,9,10],a[::n]格式为从数组的第一个起，切去n-1个数，再从下一个数起，切去n-1个数，以此类推。例如，当n=3时，a数组切片为：[1,4,7,10]。
+
+当n=2时，a为[1,3,5,7,9]
+
+第二种格式a[:n:]，这种方法是保留数组a的前n个元素，把后面的全部切除。如a[:2:]输出值为[1,2]
+
+a[:4:]输出值为[1,2,3,4]
+
+再说第三种方法a[n::]这种方法为切去a的前n项元...
+    </div>
+    <a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" itemprop="url" title="python中的切片操作" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/04/17/php1/" itemprop="url" title="php1"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-04-17 15:25:18">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-04-17T15:25:18+08:00">2023-04-17</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/04/17/php1/" itemprop="url" title="php1">php1</a></h3>
+    <div class="excerpt">
+        ​ 一直不太理解数组，今天对数组做题个总结。
+数组：将一组数据存储到一个指定容器中。用变量指向改容器，可以通过变量一次性得到该容器中的所有数据。
+数组的定义：
+1.定义数组常用array关键字。语法为：
+​ $变量名=array(元素1,元素2,元素3);
+我们可以用var_dump()函数来输出数组的元素数，元素的数据类型，元素的值。
+
+例如这个数组，array(3)代表了他的元素有三个，[0]&amp;#x3D;&amp;gt; string(1) “1”说明了键值为零的元素数据类型为string类...
+    </div>
+    <a href="/2023/04/17/php1/" itemprop="url" title="php1" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/04/10/hello-world/" itemprop="url" title="Hello World"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gicis081o9j20zk0m8dmr.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-04-10 00:21:25">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-04-10T00:21:25+08:00">2023-04-10</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/04/10/hello-world/" itemprop="url" title="Hello World">Hello World</a></h3>
+    <div class="excerpt">
+        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post$ hexo new &amp;quot;My New Post&amp;quot;
+
+More info: Writing
+Run server$...
+    </div>
+    <a href="/2023/04/10/hello-world/" itemprop="url" title="Hello World" class="btn">more...</a>
+  </div>
+</article>
+
+    </div>
+
+  </div>
+
+  
+
+
+
         </div>
-        </transition>
+        <div id="sidebar">
+          
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="寡人略秀"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">寡人略秀</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">6</span>
+        <span class="name">posts</span>
+      </a>
     </div>
 </nav>
 
-            <transition name="into">
-            <div id="main" v-show="!loading">
-                <div id="home-head">
-    <div
-        id="home-background"
-        ref="homeBackground"
-        data-images="/image/1.jpg"
-    ></div>
-    <div id="home-info" @click="homeClick">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>WZ</h1>
-                <h3></h3>
-                <h5></h5>
-            </div>
-        </span>
-    </div>
-</div>
-<div id="home-posts-wrap"  ref="homePostsWrap">
-    <div id="home-posts">
-        
-
-<div class="post">
-    <a href="/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/">
-        <h2 class="post-title">python中os.listdir的排序问题</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/5/9
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>​    os库中的os.path(path)方法可以以表列的方式返回path路径下的所有文件。但是返回的文件顺序是有改变的。例如：</p>
-<p><img src="https://s2.loli.net/2023/05/09/FxfCNUlEezWRQvB.png"></p>
-<p>这是原来的文件排序，再看返回的：</p>
-<p><img src="https://s2.loli.net/2023/05/09/a8cXn2BxEo3uvk7.png"></p>
-<p>可以看到，文件顺序是被打乱的。其实os.listdir()遍历之后的排序是按照文件名的二进制码来排的，我们可以通过改名字来避免乱序。例如将名字命名为000000001.png等。我有个例子：</p>
-<p><img src="https://s2.loli.net/2023/05/09/4dgvuxK6RAMGCPJ.png"></p>
-<p>这个是源文件，可以看到是许多有序号的二维码。我们用os.listdir()给他排序试试。</p>
-<p><img src="https://s2.loli.net/2023/05/09/Fvl3BPHzmOTgLfN.png"></p>
-<p>可以看到仍然是有顺序的。</p>
-<p>我们也可以用代码来实现这个效果。</p>
-<p><code>import os</code><br><code>path=r&quot;D:\桌面\txt&quot;</code><br><code>path_list=os.listdir(path)</code><br><code>path_list.sort(key=lambda x:int(x.split(&#39;.&#39;)[0]))</code><br><code>print(path_list)</code></p>
-<p>我们先说一下lambda。在python中，lambda函数的语法是唯一的。lambda是python预留的关键字。其语法为：</p>
-<p><code>lambda x,y:x*y</code>(其中x,y是参数，不是必须有两个)</p>
-<p>lambda函数可以将函数值赋值给一个变量。如：<code>key=lambda x,y:x*y</code></p>
-<p>就像在上述代码中：<code>path_list.sort(key=lambda x:int(x.split(&#39;.&#39;)[0]))</code></p>
-<p>意思是将代码上面运行的结果传参赋值给x，：后面的是lambda函数的内容，意思是将我们读取到的文件名从.处切片取序列为1的项，并转化为int类型。然后再作为参数让.sort处理反回结果。</p>
-<p><img src="https://s2.loli.net/2023/05/09/KV12zw5TsYdRM7n.png"></p>
-<p>这样也可以使输出结果有序。</p>
-<p><img src="https://s2.loli.net/2023/05/09/GHnCfbpw9RAOXvg.jpg"></p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/" class="go-post">阅读全文</a>
+<div class="social">
 </div>
 
-<div class="post">
-    <a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/">
-        <h2 class="post-title">python中的转义字符</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/5/8
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>​    <img src="https://s2.loli.net/2023/05/08/4G5KgiHotB6he9s.png"></p>
-<p>前三个都好理解，就是输出这三个特殊用法的字符。</p>
-<p><img src="https://s2.loli.net/2023/05/08/hVMaiYbTrXduxZ8.png"></p>
-<p>\n是输出换行，很实用。</p>
-<p><img src="https://s2.loli.net/2023/05/08/nBYLx8EOI5kyrW2.png"></p>
-<p>可以看到</p>
-<p><code>print(&#39;hello\nword&#39;)</code><br><code>print(&#39;hello&#39;&#39;\n&#39;&#39;word&#39;)</code></p>
-<p>输出结果是一样的。转义字符串都可以这样用。</p>
-<p>然后是\t,水平制表符效果如下：</p>
-<p><img src="https://s2.loli.net/2023/05/08/Qc3gTwUCyiafRBO.png"></p>
-<p>也就是说相当于把\t前后分开输出。</p>
-<p>\r的光标回到首位，我也不明白是什么意思，看效果：</p>
-<p><img src="https://s2.loli.net/2023/05/08/F4ZEsuHNRW1Gw6j.png"></p>
-<p>意思是把\r前面的删除输出后面的。</p>
-<p>\b我也不知道什么意思，看效果：</p>
-<p><img src="https://s2.loli.net/2023/05/08/mi39S7ydJUCkY2Q.png"></p>
-<p>反正就是把\b前面的字符删除了。感觉没啥作用。</p>
-<p>值得注意的是，如果不希望转义字符串发挥作用，只需要在前面加一个r就行。</p>
-<p><img src="https://s2.loli.net/2023/05/08/TIcdYJG1a7Vv5Fm.png"></p>
-<p>而且第一种格式可以，第二种格式不行。</p>
-<p><img src="https://s2.loli.net/2023/05/08/IAbypa68jMx1SRg.jpg"></p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2023/05/06/python%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%86%E5%89%B2%E4%B8%8E%E6%8B%BC%E6%8E%A5/">
-        <h2 class="post-title">python中字符串的分割与拼接</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/5/6
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>python中字符串的分割主要使用split()函数，其用法为：</p>
-<p>定义字符串a:     a&#x3D;’1234567890’</p>
-<p>然后进行分割： a1&#x3D;a.split(‘2’)</p>
-<p>输出：                 print(a1)</p>
-<p>结果为：</p>
-<p><img src="https://s2.loli.net/2023/05/06/V1YF354yN9jRDHO.png"></p>
-<p>可以看到，.split()函数中的值为’2’,也就是被切割的值为2，字符串a就会把2的值切去。这个方法可以去除字符串中所有的某一个值。</p>
-<p>我们让a的值为121212121验证一下。</p>
-<p><img src="https://s2.loli.net/2023/05/06/F1MlrW7T9ZEqiNy.png"></p>
-<p>可以看到所有的2都被切去了。我们可以往split函数里加参数来控制切除的数值的个数。格式为：.split(‘a’,n)其中n为参数。我们看一下效果。</p>
-<p>n&#x3D;1时</p>
-<p><img src="https://s2.loli.net/2023/05/06/cxiYjyGoHsh2gJI.png"></p>
-<p>可以看到第一个2被切除了，但后面的依旧保留。</p>
-<p>然后是字符串的拼接。字符串的拼接用到join函数。用法为<code>&#39;b&#39;.join(a1)</code>（其中b是分割符，可以为-，字母，数字等，也可以不设置。）</p>
-<p>我们在上述代码中加入a2&#x3D;’’.join(a1)即可实现对a1的拼接。</p>
-<p><img src="https://s2.loli.net/2023/05/06/9uO8KPdceEstSLm.png"></p>
-<p>可以看到a2就是a1拼接后的结果。</p>
-<p>第二种用法，需要引用os库。格式为：os.path.join(a1,a2,a3,a4,······)意思是把a1,a2,a3,a4a······等用\链接起来当作路径，我们来浅试一下。</p>
-<p><code>import os</code><br><code>a1=&#39;wz&#39;</code><br><code>a2=&#39;lk&#39;</code><br><code>a3=&#39;fz&#39;</code><br><code>a4=&#39;eq&#39;</code><br><code>print(os.path.join(a1,a2,a3,a4))</code></p>
-<p>输出结果为：<code>wz\lk\fz\eq</code></p>
-<p><img src="https://s2.loli.net/2023/04/17/CmpqyeGEBKJzTUh.jpg"></p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/2023/05/06/python%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%86%E5%89%B2%E4%B8%8E%E6%8B%BC%E6%8E%A5/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/">
-        <h2 class="post-title">python中的切片操作</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/4/30
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>  python中的切片操作，具体是指对数组的切片。格式为：</p>
-<p><code>a[::n]</code></p>
-<p><code>a[:n:]</code></p>
-<p><code>a[n::]</code></p>
-<p>其中a为数组，n为切片数。具体演示为：</p>
-<p>定义一个数组<code>a[1,2,3,4,5,6,7,8,9,10]</code>,a[::n]格式为从数组的第一个起，切去<code>n-1</code>个数，再从下一个数起，切去<code>n-1</code>个数，以此类推。例如，当<code>n=3</code>时，a数组切片为：<code>[1,4,7,10]</code>。</p>
-<p><img src="https://s2.loli.net/2023/04/30/bXYHvysqPKTOU4z.png"></p>
-<p><code>当n=2时，a为[1,3,5,7,9]</code></p>
-<p><img src="https://s2.loli.net/2023/04/30/QBsNDA2zbrT6eGq.png"></p>
-<p>第二种格式a[:n:]，这种方法是保留数组a的前n个元素，把后面的全部切除。如<code>a[:2:]输出值为[1,2]</code></p>
-<p><img src="https://s2.loli.net/2023/04/30/7k3iXBRyLQeWKDC.png"></p>
-<p><code>a[:4:]输出值为[1,2,3,4]</code></p>
-<p><img src="https://s2.loli.net/2023/04/30/CKidTkrygWhvwI7.png"></p>
-<p>再说第三种方法a[n::]这种方法为切去a的前n项元素，如<code>a[4::]输出值为[5,6,7,8,9,10]</code></p>
-<p><img src="https://s2.loli.net/2023/04/30/TOq2YhrI4xyUcw6.png"></p>
-<p><code>a[::6]输出值为[7,8,9,10]</code></p>
-<p><img src="https://s2.loli.net/2023/04/30/HAiL1w4hNmJsFVq.png"></p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2023/04/17/php1/">
-        <h2 class="post-title">php1</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/4/17
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>​        一直不太理解数组，今天对数组做题个总结。</p>
-<p>   数组：将一组数据存储到一个指定容器中。用变量指向改容器，可以通过变量一次性得到该容器中的所有数据。</p>
-<p><strong>数组的定义：</strong></p>
-<p>   1.定义数组常用array关键字。语法为：</p>
-<p>​     <code>$变量名=array(元素1,元素2,元素3);</code></p>
-<p>  我们可以用var_dump()函数来输出数组的元素数，元素的数据类型，元素的值。</p>
-<p><img src="https://s2.loli.net/2023/04/17/ZrIsBkz6M7iShY8.png"></p>
-<p>  例如这个数组，array(3)代表了他的元素有三个，[0]&#x3D;&gt; string(1)  “1”说明了键值为零的元素数据类型为string类       型，值为1。再说一下键值，每个数据都有一个键值，而系统键值是从0开始的。也就是说，第一个元素的键值为  0，第二个元素的键值为1，以此类推。</p>
-<p>  2.定义变量还可以用[]包裹数据来表示，语法为：$变量名&#x3D;[元素1,元素2,元素3]；</p>
-<p><img src="https://s2.loli.net/2023/04/17/nVUJ3FSyRsK1pBN.png"></p>
-<p>  所以上一个数组也可以写为这样。</p>
-<p>  3.隐形定义数组，语法为：$变量名[键值]&#x3D;值1；这种定义法好像只能给我们所定义的键值的元素赋值。</p>
-<p><img src="https://s2.loli.net/2023/04/17/DjZPVcH3GWloCwS.png"></p>
-<p><strong>数组的维度：</strong></p>
-<p>  1.一维数组，就是上文所说的数组。</p>
-<p>  2.二维数组，数组中所有的元素都是一维数组。</p>
-<pre><code>&lt;?php
-$arr1=array(
-    array(&#39;name&#39;=&gt;&#39;wz&#39;,&#39;age&#39;=&gt;19),
-    array(&#39;name&#39;=&gt;&#39;xz&#39;,&#39;age&#39;=&gt;18),
-    array(&#39;name&#39;=&gt;&#39;yf&#39;,&#39;age&#39;=&gt;17)
-);
-var_dump($arr1);
-?&gt;
-</code></pre>
-<p><code>array(3) &#123;</code><br>  <code>[0]=&gt;</code><br>  <code>array(2) &#123;</code><br>    <code>[&quot;name&quot;]=&gt;</code><br>    <code>string(2) &quot;wz&quot;</code><br>    <code>[&quot;age&quot;]=&gt;</code><br>    <code>int(19)</code><br>  <code>&#125;</code><br>  <code>[1]=&gt;</code><br>  <code>array(2) &#123;</code><br>    <code>[&quot;name&quot;]=&gt;</code><br>    <code>string(2) &quot;xz&quot;</code><br>    <code>[&quot;age&quot;]=&gt;</code><br>    <code>int(18)</code><br>  <code>&#125;</code><br>  <code>[2]=&gt;</code><br>  <code>array(2) &#123;</code><br>    <code>[&quot;name&quot;]=&gt;</code><br>    <code>string(2) &quot;yf&quot;</code><br>    <code>[&quot;age&quot;]=&gt;</code><br>    <code>int(17)</code><br>  <code>&#125;</code><br><code>&#125;</code></p>
-<p>3.多维数组，类似于二维数组。</p>
-<p><strong>数组遍历：</strong></p>
-<p>使数组中所有的数据依次输出出来，使用一些简化的规则来实现自动获取下标以及输出数组元素。</p>
-<p>1.foreach遍历数组，语法为：foreach($变量名 as $k&#x3D;&gt;$v )</p>
-<pre><code>&lt;?php
-$arr1=array(&#39;1&#39;,2,&quot;hello&quot;);
-foreach($arr1 as $k=&gt;$v)
-&#123;
-    echo &quot;$k\n&quot;,&quot;$v\n&quot;;
-&#125;
-
-?&gt;
-</code></pre>
-<p>输出结果为：</p>
-<p><code>0 1 2</code></p>
-<p><code>1 2 hello</code></p>
-<p>所以k为键值，v为变量值。(其中，k,v的可随意选取)。</p>
-<p>其他的不常用，不说了。</p>
-<p><img src="https://s2.loli.net/2023/04/17/CmpqyeGEBKJzTUh.jpg"></p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/2023/04/17/php1/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2023/04/10/hello-world/">
-        <h2 class="post-title">Hello World</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/4/10
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/2023/04/10/hello-world/" class="go-post">阅读全文</a>
-</div>
-
-
-        <div class="page-current">
-    <div class="prev">
-        
-    </div>
-    <div class="page-index">
-        
-        <span class="current">1</span>
-        
-    </div>
-    <div class="next">
-        
-    </div>
-</div>
-
-    </div>
+<ul class="menu">
+  
     
-    <div id="home-card">
-        <div id="card-div">
-    <div class="card-style">
-        <div class="avatar">
-            <img src="/images/0.jpg" alt="avatar" />
-        </div>
-        <div class="name">寡人略秀</div>
-        <div class="description">
-            <p>WZ<br>…</p>
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
 
-        </div>
-        
-        
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a href="/null">Argvchs</a>
-            </div>
-            
-        </div>
-        
+
+</ul>
+
+      </div>
     </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
 </div>
 
-    </div>
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
     
+<div class="breadcrumb">
 </div>
 
-                <footer id="footer">
-    <div id="footer-wrap">
-        <div>
-            &copy;
-            2022 - 2023 WZ
-            <span id="footer-icon">
-                <i class="fa-solid fa-font-awesome fa-fw"></i>
-            </span>
-            &commat;寡人略秀
-        </div>
-        <div>
-            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
-            <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
-        </div>
-        
-    </div>
-</footer>
+    <span><a href="/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/" title="python中os.listdir的排序问题">python中os.listdir的排序问题</a></span>
+  </li>
 
-            </div>
-            </transition>
-            
-            <transition name="fade">
-            <div id="preview" ref="preview" v-show="previewShow">
-                <img id="preview-content" ref="previewContent" />
-            </div>
-            </transition>
-            
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/10/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" title="python中的转义字符">python中的转义字符</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/17/php1/" title="php1">php1</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/05/06/python%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%86%E5%89%B2%E4%B8%8E%E6%8B%BC%E6%8E%A5/" title="python中字符串的分割与拼接">python中字符串的分割与拼接</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" title="python中的切片操作">python中的切片操作</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
         </div>
-        <script src="/js/main.js"></script>
-        
-    </body>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">寡人略秀 @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
 </html>

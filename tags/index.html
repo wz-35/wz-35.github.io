@@ -25,12 +25,11 @@
 
   
 
-<link rel="canonical" href="http://example.com/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/">
+<link rel="canonical" href="http://example.com/tags/">
 
 
 
-  <title>
-python中os.listdir的排序问题 |
+  <title>AllTag |
 Yume Shoka = WZ</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,19 +57,8 @@ Yume Shoka = WZ</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">python中os.listdir的排序问题
+  <h1 itemprop="name headline">AllTag
   </h1>
-  
-<div class="meta">
-  <span class="item" title="Created: 2023-05-09 13:07:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <span class="text">Posted on</span>
-    <time itemprop="dateCreated datePublished" datetime="2023-05-09T13:07:00+08:00">2023-05-09</time>
-  </span>
-</div>
-
 
           </div>
         </div>
@@ -100,12 +88,12 @@ Yume Shoka = WZ</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclga70tsj20zk0m84mr.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeun65urj20zk0m81ii.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
         </ul>
       </div>
     </header>
@@ -126,128 +114,12 @@ Yume Shoka = WZ</title>
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="article wrap">
-    
-<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-<i class="ic i-home"></i>
-<span><a href="/">Home</a></span>
-</div>
-
-    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/">
-
-  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="image" content="/images/avatar.jpg">
-    <meta itemprop="name" content="寡人略秀">
-    <meta itemprop="description" content=", ">
-  </span>
-
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="WZ">
-  </span>
-
-  <div class="body md" itemprop="articleBody">
-    
-
-    <p>​    os库中的os.path(path)方法可以以表列的方式返回path路径下的所有文件。但是返回的文件顺序是有改变的。例如：</p>
-<p><img data-src="https://s2.loli.net/2023/05/09/FxfCNUlEezWRQvB.png"></p>
-<p>这是原来的文件排序，再看返回的：</p>
-<p><img data-src="https://s2.loli.net/2023/05/09/a8cXn2BxEo3uvk7.png"></p>
-<p>可以看到，文件顺序是被打乱的。其实os.listdir()遍历之后的排序是按照文件名的二进制码来排的，我们可以通过改名字来避免乱序。例如将名字命名为000000001.png等。我有个例子：</p>
-<p><img data-src="https://s2.loli.net/2023/05/09/4dgvuxK6RAMGCPJ.png"></p>
-<p>这个是源文件，可以看到是许多有序号的二维码。我们用os.listdir()给他排序试试。</p>
-<p><img data-src="https://s2.loli.net/2023/05/09/Fvl3BPHzmOTgLfN.png"></p>
-<p>可以看到仍然是有顺序的。</p>
-<p>我们也可以用代码来实现这个效果。</p>
-<p><code>import os</code><br><code>path=r&quot;D:\桌面\txt&quot;</code><br><code>path_list=os.listdir(path)</code><br><code>path_list.sort(key=lambda x:int(x.split(&#39;.&#39;)[0]))</code><br><code>print(path_list)</code></p>
-<p>我们先说一下lambda。在python中，lambda函数的语法是唯一的。lambda是python预留的关键字。其语法为：</p>
-<p><code>lambda x,y:x*y</code>(其中x,y是参数，不是必须有两个)</p>
-<p>lambda函数可以将函数值赋值给一个变量。如：<code>key=lambda x,y:x*y</code></p>
-<p>就像在上述代码中：<code>path_list.sort(key=lambda x:int(x.split(&#39;.&#39;)[0]))</code></p>
-<p>意思是将代码上面运行的结果传参赋值给x，：后面的是lambda函数的内容，意思是将我们读取到的文件名从.处切片取序列为1的项，并转化为int类型。然后再作为参数让.sort处理反回结果。</p>
-<p><img data-src="https://s2.loli.net/2023/05/09/KV12zw5TsYdRM7n.png"></p>
-<p>这样也可以使输出结果有序。</p>
-<p><img data-src="https://s2.loli.net/2023/05/09/GHnCfbpw9RAOXvg.jpg"></p>
-
-  </div>
-
-   <footer>
-
-    <div class="meta">
-  <span class="item">
-    <span class="icon">
-      <i class="ic i-calendar-check"></i>
-    </span>
-    <span class="text">Edited on</span>
-    <time title="Modified: 2023-05-09 21:31:08" itemprop="dateModified" datetime="2023-05-09T21:31:08+08:00">2023-05-09</time>
-  </span>
-</div>
-
-      
-<div class="reward">
-  <button><i class="ic i-heartbeat"></i> Donate</button>
-  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
-  <div id="qr">
-      
-      <div>
-        <img data-src="/images/wechatpay.png" alt="寡人略秀 WeChat Pay">
-        <p>WeChat Pay</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/alipay.png" alt="寡人略秀 Alipay">
-        <p>Alipay</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/paypal.png" alt="寡人略秀 PayPal">
-        <p>PayPal</p>
+  <div class="collapse wrap">
+      <h2 class="item title"><a href="/">Home</a> <small>/</small> No tags</h2>
+      <div class="tag cloud">
+        
       </div>
   </div>
-</div>
-
-      
-
-<div id="copyright">
-<ul>
-  <li class="author">
-    <strong>Post author:  </strong>寡人略秀 <i class="ic i-at"><em>@</em></i>WZ
-  </li>
-  <li class="link">
-    <strong>Post link: </strong>
-    <a href="http://example.com/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/" title="python中os.listdir的排序问题">http://example.com/2023/05/09/python中os-listdir的排序问题/</a>
-  </li>
-  <li class="license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
-  </li>
-</ul>
-</div>
-
-  </footer>
-
-</article>
-
-  </div>
-  
-
-<div class="post-nav">
-    <div class="item left">
-      
-
-  <a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicis3attqj20zk0m8k7l.jpg" title="python中的转义字符">
-  <span class="type">Previous Post</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>python中的转义字符</h3>
-  </a>
-
-    </div>
-    <div class="item right">
-    </div>
-</div>
-
-  
-  <div class="wrap" id="comments"></div>
-
 
         </div>
         <div id="sidebar">
@@ -324,25 +196,7 @@ Yume Shoka = WZ</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" title="python中的转义字符">python中的转义字符</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/" title="python中os.listdir的排序问题">python中os.listdir的排序问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" title="python中的切片操作">python中的切片操作</a></span>
+    <span><a href="/2023/04/17/php1/" title="php1">php1</a></span>
   </li>
 
       
@@ -360,7 +214,25 @@ Yume Shoka = WZ</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/04/17/php1/" title="php1">php1</a></span>
+    <span><a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" title="python中的转义字符">python中的转义字符</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" title="python中的切片操作">python中的切片操作</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/" title="python中os.listdir的排序问题">python中os.listdir的排序问题</a></span>
   </li>
 
       
@@ -400,7 +272,7 @@ Yume Shoka = WZ</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2023/05/09/python中os-listdir的排序问题/',
+    path: 'tags/',
     favicon: {
       show: "（●´3｀●）Goooood",
       hide: "(´Д｀)Booooom"
