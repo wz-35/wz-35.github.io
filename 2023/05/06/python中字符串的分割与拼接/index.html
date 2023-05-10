@@ -100,12 +100,12 @@ Yume Shoka = WZ</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipevuctzzj20zk0m84qp.jpg"></li>
         </ul>
       </div>
     </header>
@@ -149,27 +149,32 @@ Yume Shoka = WZ</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p>python中字符串的分割主要使用split()函数，其用法为：</p>
-<p>定义字符串a:     a&#x3D;’1234567890’</p>
-<p>然后进行分割： a1&#x3D;a.split(‘2’)</p>
-<p>输出：                 print(a1)</p>
+    <p>python 中字符串的分割主要使用 split () 函数，其用法为：</p>
+<p>定义字符串 a:     a=‘1234567890’</p>
+<p>然后进行分割： a1=a.split (‘2’)</p>
+<p>输出：                 print (a1)</p>
 <p>结果为：</p>
-<p><img data-src="https://s2.loli.net/2023/05/06/V1YF354yN9jRDHO.png"></p>
-<p>可以看到，.split()函数中的值为’2’,也就是被切割的值为2，字符串a就会把2的值切去。这个方法可以去除字符串中所有的某一个值。</p>
-<p>我们让a的值为121212121验证一下。</p>
-<p><img data-src="https://s2.loli.net/2023/05/06/F1MlrW7T9ZEqiNy.png"></p>
-<p>可以看到所有的2都被切去了。我们可以往split函数里加参数来控制切除的数值的个数。格式为：.split(‘a’,n)其中n为参数。我们看一下效果。</p>
-<p>n&#x3D;1时</p>
-<p><img data-src="https://s2.loli.net/2023/05/06/cxiYjyGoHsh2gJI.png"></p>
-<p>可以看到第一个2被切除了，但后面的依旧保留。</p>
-<p>然后是字符串的拼接。字符串的拼接用到join函数。用法为<code>&#39;b&#39;.join(a1)</code>（其中b是分割符，可以为-，字母，数字等，也可以不设置。）</p>
-<p>我们在上述代码中加入a2&#x3D;’’.join(a1)即可实现对a1的拼接。</p>
-<p><img data-src="https://s2.loli.net/2023/05/06/9uO8KPdceEstSLm.png"></p>
-<p>可以看到a2就是a1拼接后的结果。</p>
-<p>第二种用法，需要引用os库。格式为：os.path.join(a1,a2,a3,a4,······)意思是把a1,a2,a3,a4a······等用\链接起来当作路径，我们来浅试一下。</p>
-<p><code>import os</code><br><code>a1=&#39;wz&#39;</code><br><code>a2=&#39;lk&#39;</code><br><code>a3=&#39;fz&#39;</code><br><code>a4=&#39;eq&#39;</code><br><code>print(os.path.join(a1,a2,a3,a4))</code></p>
-<p>输出结果为：<code>wz\lk\fz\eq</code></p>
-<p><img data-src="https://s2.loli.net/2023/04/17/CmpqyeGEBKJzTUh.jpg"></p>
+<p><img data-src="https://s2.loli.net/2023/05/06/V1YF354yN9jRDHO.png" alt=""></p>
+<p>可以看到，.split () 函数中的值为’2’, 也就是被切割的值为 2，字符串 a 就会把 2 的值切去。这个方法可以去除字符串中所有的某一个值。</p>
+<p>我们让 a 的值为 121212121 验证一下。</p>
+<p><img data-src="https://s2.loli.net/2023/05/06/F1MlrW7T9ZEqiNy.png" alt=""></p>
+<p>可以看到所有的 2 都被切去了。我们可以往 split 函数里加参数来控制切除的数值的个数。格式为：.split (‘a’,n) 其中 n 为参数。我们看一下效果。</p>
+<p>n=1 时</p>
+<p><img data-src="https://s2.loli.net/2023/05/06/cxiYjyGoHsh2gJI.png" alt=""></p>
+<p>可以看到第一个 2 被切除了，但后面的依旧保留。</p>
+<p>然后是字符串的拼接。字符串的拼接用到 join 函数。用法为 <code>'b'.join(a1)</code> （其中 b 是分割符，可以为 -，字母，数字等，也可以不设置。）</p>
+<p>我们在上述代码中加入 a2=’’.join (a1) 即可实现对 a1 的拼接。</p>
+<p><img data-src="https://s2.loli.net/2023/05/06/9uO8KPdceEstSLm.png" alt=""></p>
+<p>可以看到 a2 就是 a1 拼接后的结果。</p>
+<p>第二种用法，需要引用 os 库。格式为：os.path.join (a1,a2,a3,a4,・・・・・・) 意思是把 a1,a2,a3,a4a・・・・・・等用 \ 链接起来当作路径，我们来浅试一下。</p>
+<p><code>import os</code> <br>
+ <code>a1='wz'</code> <br>
+ <code>a2='lk'</code> <br>
+ <code>a3='fz'</code> <br>
+ <code>a4='eq'</code> <br>
+ <code>print(os.path.join(a1,a2,a3,a4))</code></p>
+<p>输出结果为： <code>wz\lk\fz\eq</code></p>
+<p><img data-src="https://s2.loli.net/2023/04/17/CmpqyeGEBKJzTUh.jpg" alt=""></p>
 
   </div>
 
@@ -236,7 +241,7 @@ Yume Shoka = WZ</title>
     <div class="item left">
       
 
-  <a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclize41wj20zk0m87gk.jpg" title="python中的切片操作">
+  <a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipevarprfj20zk0m8npd.jpg" title="python中的切片操作">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>python中的切片操作</h3>
@@ -246,7 +251,7 @@ Yume Shoka = WZ</title>
     <div class="item right">
       
 
-  <a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipewf5l51j20zk0m8b29.jpg" title="python中的转义字符">
+  <a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipey84bjtj20zk0m8hdt.jpg" title="python中的转义字符">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>python中的转义字符</h3>
@@ -336,34 +341,7 @@ Yume Shoka = WZ</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/04/10/hello-world/" title="Hello World">Hello World</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" title="python中的转义字符">python中的转义字符</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/" title="python中os.listdir的排序问题">python中os.listdir的排序问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/04/17/php1/" title="php1">php1</a></span>
   </li>
 
       
@@ -382,6 +360,33 @@ Yume Shoka = WZ</title>
 </div>
 
     <span><a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" title="python中的切片操作">python中的切片操作</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/17/php1/" title="php1">php1</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/" title="python中os.listdir的排序问题">python中os.listdir的排序问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/10/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
   </ul>

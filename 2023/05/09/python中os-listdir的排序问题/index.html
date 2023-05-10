@@ -100,12 +100,12 @@ Yume Shoka = WZ</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclga70tsj20zk0m84mr.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giciszlczyj20zk0m816d.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li>
         </ul>
       </div>
     </header>
@@ -149,25 +149,29 @@ Yume Shoka = WZ</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p>​    os库中的os.path(path)方法可以以表列的方式返回path路径下的所有文件。但是返回的文件顺序是有改变的。例如：</p>
-<p><img data-src="https://s2.loli.net/2023/05/09/FxfCNUlEezWRQvB.png"></p>
+    <p>​    os 库中的 os.path (path) 方法可以以表列的方式返回 path 路径下的所有文件。但是返回的文件顺序是有改变的。例如：</p>
+<p><img data-src="https://s2.loli.net/2023/05/09/FxfCNUlEezWRQvB.png" alt=""></p>
 <p>这是原来的文件排序，再看返回的：</p>
-<p><img data-src="https://s2.loli.net/2023/05/09/a8cXn2BxEo3uvk7.png"></p>
-<p>可以看到，文件顺序是被打乱的。其实os.listdir()遍历之后的排序是按照文件名的二进制码来排的，我们可以通过改名字来避免乱序。例如将名字命名为000000001.png等。我有个例子：</p>
-<p><img data-src="https://s2.loli.net/2023/05/09/4dgvuxK6RAMGCPJ.png"></p>
-<p>这个是源文件，可以看到是许多有序号的二维码。我们用os.listdir()给他排序试试。</p>
-<p><img data-src="https://s2.loli.net/2023/05/09/Fvl3BPHzmOTgLfN.png"></p>
+<p><img data-src="https://s2.loli.net/2023/05/09/a8cXn2BxEo3uvk7.png" alt=""></p>
+<p>可以看到，文件顺序是被打乱的。其实 os.listdir () 遍历之后的排序是按照文件名的二进制码来排的，我们可以通过改名字来避免乱序。例如将名字命名为 000000001.png 等。我有个例子：</p>
+<p><img data-src="https://s2.loli.net/2023/05/09/4dgvuxK6RAMGCPJ.png" alt=""></p>
+<p>这个是源文件，可以看到是许多有序号的二维码。我们用 os.listdir () 给他排序试试。</p>
+<p><img data-src="https://s2.loli.net/2023/05/09/Fvl3BPHzmOTgLfN.png" alt=""></p>
 <p>可以看到仍然是有顺序的。</p>
 <p>我们也可以用代码来实现这个效果。</p>
-<p><code>import os</code><br><code>path=r&quot;D:\桌面\txt&quot;</code><br><code>path_list=os.listdir(path)</code><br><code>path_list.sort(key=lambda x:int(x.split(&#39;.&#39;)[0]))</code><br><code>print(path_list)</code></p>
-<p>我们先说一下lambda。在python中，lambda函数的语法是唯一的。lambda是python预留的关键字。其语法为：</p>
-<p><code>lambda x,y:x*y</code>(其中x,y是参数，不是必须有两个)</p>
-<p>lambda函数可以将函数值赋值给一个变量。如：<code>key=lambda x,y:x*y</code></p>
-<p>就像在上述代码中：<code>path_list.sort(key=lambda x:int(x.split(&#39;.&#39;)[0]))</code></p>
-<p>意思是将代码上面运行的结果传参赋值给x，：后面的是lambda函数的内容，意思是将我们读取到的文件名从.处切片取序列为1的项，并转化为int类型。然后再作为参数让.sort处理反回结果。</p>
-<p><img data-src="https://s2.loli.net/2023/05/09/KV12zw5TsYdRM7n.png"></p>
+<p><code>import os</code> <br>
+ <code>path=r&quot;D:\桌面\txt&quot;</code> <br>
+ <code>path_list=os.listdir(path)</code> <br>
+ <code>path_list.sort(key=lambda x:int(x.split('.')[0]))</code> <br>
+ <code>print(path_list)</code></p>
+<p>我们先说一下 lambda。在 python 中，lambda 函数的语法是唯一的。lambda 是 python 预留的关键字。其语法为：</p>
+<p><code>lambda x,y:x*y</code>  (其中 x,y 是参数，不是必须有两个)</p>
+<p>lambda 函数可以将函数值赋值给一个变量。如： <code>key=lambda x,y:x*y</code></p>
+<p>就像在上述代码中： <code>path_list.sort(key=lambda x:int(x.split('.')[0]))</code></p>
+<p>意思是将代码上面运行的结果传参赋值给 x，：后面的是 lambda 函数的内容，意思是将我们读取到的文件名从。处切片取序列为 1 的项，并转化为 int 类型。然后再作为参数让.sort 处理反回结果。</p>
+<p><img data-src="https://s2.loli.net/2023/05/09/KV12zw5TsYdRM7n.png" alt=""></p>
 <p>这样也可以使输出结果有序。</p>
-<p><img data-src="https://s2.loli.net/2023/05/09/GHnCfbpw9RAOXvg.jpg"></p>
+<p><img data-src="https://s2.loli.net/2023/05/09/GHnCfbpw9RAOXvg.jpg" alt=""></p>
 
   </div>
 
@@ -234,7 +238,7 @@ Yume Shoka = WZ</title>
     <div class="item left">
       
 
-  <a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicis3attqj20zk0m8k7l.jpg" title="python中的转义字符">
+  <a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicm0fdw5cj20zk0m8hdt.jpg" title="python中的转义字符">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>python中的转义字符</h3>
@@ -324,7 +328,7 @@ Yume Shoka = WZ</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" title="python中的转义字符">python中的转义字符</a></span>
+    <span><a href="/2023/04/17/php1/" title="php1">php1</a></span>
   </li>
 
       
@@ -333,16 +337,7 @@ Yume Shoka = WZ</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/" title="python中os.listdir的排序问题">python中os.listdir的排序问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" title="python中的切片操作">python中的切片操作</a></span>
+    <span><a href="/2023/04/10/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
       
@@ -360,7 +355,7 @@ Yume Shoka = WZ</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/04/17/php1/" title="php1">php1</a></span>
+    <span><a href="/2023/05/08/python%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/" title="python中的转义字符">python中的转义字符</a></span>
   </li>
 
       
@@ -369,7 +364,16 @@ Yume Shoka = WZ</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/04/10/hello-world/" title="Hello World">Hello World</a></span>
+    <span><a href="/2023/04/30/python%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" title="python中的切片操作">python中的切片操作</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/05/09/python%E4%B8%ADos-listdir%E7%9A%84%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/" title="python中os.listdir的排序问题">python中os.listdir的排序问题</a></span>
   </li>
 
   </ul>
