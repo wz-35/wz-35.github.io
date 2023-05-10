@@ -1,0 +1,32 @@
+/*tag-cloud*/
+.tag-cloud {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .tag-cloud-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .tag-cloud-tags {
+    text-align: center;
+  }
+  .tag-cloud a {
+    display: inline-block;
+    margin: 0 0.4rem;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 15px;
+    cursor: pointer;
+    line-height: normal;
+    padding: 5px 5px 5px 10px;
+    position: relative;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.3s;
+  }
+  .tag-cloud a:before {
+    content: "🔖";
+  }
+  .tag-cloud a:hover {
+    color: #ff7242 !important;
+    transform: scale(1.2);
+  }
